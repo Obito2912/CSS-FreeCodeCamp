@@ -4,3 +4,45 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.5rem;
 }
+
+.columns {
+  /* With this two properties we make our columns responsive, meaning that if the screen 
+  is big enough to have the 4 columns at 250px each it will do so, otherwise, it will 
+  change to 3, then 4 until it can only take 250px for on column in this example. */
+  /* column-count: 4;
+  column-width: 250px; SHORTHAND BELOW*/
+  columns: 4 250px;
+  /* This next property will only work if there are multiple columns, if there is only one it won't 
+  do anything */
+  column-rule: 3px solid #333;
+  column-gap: 3rem;
+}
+
+.columns p {
+  /* Since margin is collapsing here we just need to remove margin top and it will look nice */
+  margin-top: 0;
+}
+
+.columns h2 {
+  color: #fff;
+  margin-top: 0;
+  padding: 1rem;
+  background-color: #333;
+  /* IF THE NEXT PROPERTY IS NOT USED, THE MARGIN OR PADDING WILL RUIN THE STRUCTURE WHEN SHRINKING */
+  break-inside: avoid;
+  /* This next property can be used only when we are sure the page will not shrink too much, otherwise, 
+  the browser will stay with 3 columns in this case, and make everything smaller for smaller screens*/
+  break-before: column;
+}
+
+.columns .quote {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all;
+}
+
+.nowrap {
+  white-space: nowrap;
+}

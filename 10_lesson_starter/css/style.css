@@ -5,8 +5,50 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-p {
-  /* this is a block level element and it automatically takes 100% of width of parent.  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* p {
+  this is a block level element and it automatically takes 100% of width of parent. 
   background-color: lightgray;
 }
 
+.opposite {
+  background-color: #333;
+  color: whitesmoke;
+  We cannot apply margin, height to inline elements
+  margin-top: 100px;
+  height: 200px;
+  Padding does work but if it's too big it overlap on content that is too close 
+  padding: 3rem;
+  If we don't want this to happen we can use the following property: 
+  but this will change the size of the inline paragraph tag
+  It will also allow this inline element to be able to have margin and height 
+  But it will not look good
+  display: inline-block; 
+} */
+
+ul {
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: #000;
+}
+
+li {
+  display: inline-block;
+  margin-inline: 0.5rem;
+  text-decoration: none;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li a:hover, li a:focus {
+  text-decoration: underline;
+}
