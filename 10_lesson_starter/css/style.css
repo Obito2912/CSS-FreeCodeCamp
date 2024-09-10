@@ -5,3 +5,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+p {
+  /* this is a block level element and it automatically takes 100% of width of parent.  */
+  background-color: lightgray;
+}
+
